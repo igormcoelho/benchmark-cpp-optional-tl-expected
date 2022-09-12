@@ -1,0 +1,13 @@
+load("@rules_cc//cc:defs.bzl", "cc_library", "cc_binary")
+
+package(
+    default_visibility = ["//visibility:public"],
+)
+
+cc_binary(
+    name = "app_bench",
+    srcs = ["src/bench-optional-tl/main.cpp"],
+    copts = ['-std=c++17', '-Wfatal-errors', '-fno-exceptions', '-Ofast', '-DNDEBUG', '-DCMAKE_BUILD_TYPE=Release'],
+    deps = ["@benchmark//:benchmark", "@tl-expected//:tl-expected"]
+)
+

@@ -1,3 +1,9 @@
+# bazel helper files
+bazel-*
+
+# conan helper files
+conandeps*
+
 # Prerequisites
 *.d
 
